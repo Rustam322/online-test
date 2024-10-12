@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математический тест</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Онлайн Математический Тест</h1>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Добро пожаловать на тест!</h2>
+            <p>Выберите уровень сложности теста и приступайте к решению вопросов.</p>
+            <div class="difficulty-buttons">
+                <button onclick="startTest('5-7')">5-7 класс</button>
+                <button onclick="startTest('8-9')">8-9 класс</button>
+                <button onclick="startTest('10-11')">10-11 класс</button>
+            </div>
+        </section>
+
+        <section id="test" style="display: none;">
+            <h2 id="test-title">Тест</h2>
+            <div id="questions"></div>
+            <button id="back-button" onclick="goBack()">Назад</button>
+            <!-- <button id="submit-button" onclick="submitTest()">Отправить</button> -->
+            <button id="submit-button" onclick="submitTest()">Завершить тест</button>
+
+        </section>
+
+        <section id="result" style="display: none;">
+            <h2>Ваши результаты</h2>
+            <p id="result-text"></p>
+            <button onclick="location.reload()">Пройти еще раз</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Математический тест. Все права защищены.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/script.js"></script>
+</body>
+</html>
